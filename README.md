@@ -1,5 +1,4 @@
 # factorio-server-updater
-# Factorio Server Updater
 
 [![Made with Bash](https://img.shields.io/badge/Made%20with-Bash-1f425f.svg)](https://www.gnu.org/software/bash/)
 
