@@ -14,7 +14,7 @@ This script is designed to be run manually or automated as a cron job. It handle
 +  Check for Updates: It checks whether a new version is available via the official Factorio API
 + Compare Versions: It compares the latest available version with the version currently installed (recorded in ```current_version.txt```)
 + Execute Update (if needed): If a newer version is found, the script proceeds with the following steps:
-   1. Stop Server: It sends a ```SIGTERM``` shutdown signal to the running Factorio process and waits for its exit. If the server is unresponsive, it will use a SIGKILL to force it to stop.
+   1. Stop Server: It sends a ```SIGTERM``` shutdown signal to the running Factorio process and waits for its exit. If the server is unresponsive, it will use a SIGKILL to force it to stop. **Please note the script will try to shutdown even if there's user(player) online**
    2. Backup Data: If ```PERFORM_BACKUP_RESTORE``` is ```true```, it creates a timestamped backup of your saves and config directories.
    3. Download New Version: It downloads the least version archive (.tar.xz) using the link provided (default: ```https://factorio.com/get-download/stable/headless/linux64```)
    4. Extract Files: It extracts the new files, overwriting the old Factorio installation
